@@ -15,7 +15,7 @@ using System.Threading.Tasks;
 
 namespace CMS.Data.Entities
 {
-    internal class OrderDetail
+    public class OrderDetail
     {
         [Key]
         public int Id { get; set; }

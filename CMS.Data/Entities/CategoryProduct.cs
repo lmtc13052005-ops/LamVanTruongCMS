@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 
 namespace CMS.Data.Entities
 {
-    internal class CategoryProduct
+    public class CategoryProduct
     {
         [Key]
         public int Id { get; set; }

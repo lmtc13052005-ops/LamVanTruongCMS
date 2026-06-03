@@ -15,7 +15,7 @@ using System.Threading.Tasks;
 
 namespace CMS.Data.Entities
 {
-    internal class Order
+    public class Order
     {
         [Key]
         public int Id { get; set; }

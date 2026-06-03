@@ -1,25 +1,13 @@
-﻿/*
-- Sinh viên:Lâm Văn Trường
-- MSSV: 2123110165
-- Ngay tao:15/05/2026
-*/
-
-
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CMS.Data.Entities
+﻿namespace CMS.Data.Entities
 {
-    internal class User
+    public class User
     {
         public int Id { get; set; }
-        public string Username { get; set; }
-        public string PasswordHash { get; set; }
-        public string FullName { get; set; }
-        public string Role { get; set; } // Quản trị viên hoặc Biên tập viên
 
+        public string Username { get; set; }
+
+        public string FullName { get; set; }
+
+        public string Role { get; set; }
     }
 }

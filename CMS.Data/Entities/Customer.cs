@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 
 namespace CMS.Data.Entities
 {
-    internal class Customer
+    public class Customer
     {
         [Key]
         public int Id { get; set; }
