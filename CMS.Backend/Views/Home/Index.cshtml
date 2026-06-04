@@ -1,8 +1,58 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model IEnumerable<CMS.Data.Entities.Post>
+
+@{
+    ViewData["Title"] = "Trang chủ";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome Lam Van Truong B1</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container mt-5">
+    <div class="text-center mb-5">
+        <h2 class="text-danger fw-normal" style="font-family: Arial, sans-serif; font-size: 32px; letter-spacing: 1px;">TIN TỨC MỚI NHẤT</h2>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 border shadow-sm p-2" style="border-radius: 4px;">
+                <img src="https://picsum.photos/id/1/350/200" class="card-img-top rounded" alt="Post Image" style="height: 200px; object-fit: cover; width: 100%;">
+                <div class="card-body p-3 d-flex flex-column">
+                    <span class="badge bg-primary align-self-start mb-2" style="font-size: 11px; padding: 4px 8px;">Đời sống du lịch</span>
+                    <h5 class="card-title text-primary fw-bold mb-2" style="font-size: 16px;">Lộ trình học ASP.NET</h5>
+                    <p class="card-text text-muted small flex-grow-1">Hướng dẫn chi tiết cho người mới bắt đầu học lập trình web...</p>
+                    <div class="mt-3">
+                        <a href="#" class="btn btn-sm btn-outline-danger" style="font-size: 11px; padding: 3px 10px;">Đọc tiếp</a>
+                    </div>
+                </div>
+                <div class="card-footer bg-transparent text-muted small border-0 pt-0" style="font-size: 11px;">Ngày đăng: 01/04/2026</div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 border shadow-sm p-2" style="border-radius: 4px;">
+                <img src="https://picsum.photos/id/10/350/200" class="card-img-top rounded" alt="Post Image" style="height: 200px; object-fit: cover; width: 100%;">
+                <div class="card-body p-3 d-flex flex-column">
+                    <span class="badge bg-success align-self-start mb-2" style="font-size: 11px; padding: 4px 8px;">Sức khỏe</span>
+                    <h5 class="card-title text-primary fw-bold mb-2" style="font-size: 16px;">Chỉ số tiểu đường tuýp 2</h5>
+                    <p class="card-text text-muted small flex-grow-1">Tìm hiểu về các phương pháp phòng ngừa và thói quen ăn uống lành mạnh...</p>
+                    <div class="mt-3">
+                        <a href="#" class="btn btn-sm btn-outline-danger" style="font-size: 11px; padding: 3px 10px;">Đọc tiếp</a>
+                    </div>
+                </div>
+                <div class="card-footer bg-transparent text-muted small border-0 pt-0" style="font-size: 11px;">Ngày đăng: 13/04/2026</div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 border shadow-sm p-2" style="border-radius: 4px;">
+                <img src="https://picsum.photos/id/48/350/200" class="card-img-top rounded" alt="Post Image" style="height: 200px; object-fit: cover; width: 100%;">
+                <div class="card-body p-3 d-flex flex-column">
+                    <span class="badge bg-info text-white align-self-start mb-2" style="font-size: 11px; padding: 4px 8px;">Tin công nghệ</span>
+                    <h5 class="card-title text-primary fw-bold mb-2" style="font-size: 16px;">Lập trình Web với ASP.NET Core</h5>
+                    <p class="card-text text-muted small flex-grow-1">Hướng dẫn từng bước xây dựng ứng dụng Web từ cơ bản đến nâng cao...</p>
+                    <div class="mt-3">
+                        <a href="#" class="btn btn-sm btn-outline-danger" style="font-size: 11px; padding: 3px 10px;">Đọc tiếp</a>
+                    </div>
+                </div>
+                <div class="card-footer bg-transparent text-muted small border-0 pt-0" style="font-size: 11px;">Ngày đăng: 13/04/2026</div>
+            </div>
+        </div>
+    </div>
 </div>

@@ -1,27 +1,38 @@
 ﻿@model CMS.Data.Entities.Post
 
-<div class="container mt-5">
+@{
+    ViewData["Title"] = "Chi tiết bài viết";
+}
 
-    <h1 class="text-primary">
-        @Model.Title
-    </h1>
+<div class="container mt-4" style="max-width: 800px;">
+    <div class="card shadow-sm p-4">
+        <h1 class="text-primary fw-bold mb-3">@Model.Title</h1>
 
-    <p class="text-muted">
-        @Model.CreatedDate.ToString("dd/MM/yyyy")
-    </p>
+        <div class="d-flex align-items-center gap-2 mb-4">
+            <span class="badge bg-info text-dark fw-bold px-2 py-2">
+                <i class="bi bi-tag-fill"></i> @(Model.Category != null ? Model.Category.Name : "Chưa phân loại")
+            </span>
+            <span class="text-muted small">| Ngày đăng: @Model.CreatedDate.ToString("dd/MM/yyyy")</span>
+        </div>
 
-    <img src="@Model.ImageUrl"
-         class="img-fluid mb-4" />
+        <hr />
 
-    <p class="fs-5">
-        @Model.Content
-    </p>
+        @if (!string.IsNullOrEmpty(Model.ImageUrl))
+        {
+            <div class="text-center mb-4">
+                <img src="@Model.ImageUrl" class="img-fluid rounded shadow-sm" alt="Thumbnail" style="max-height: 400px; width: 100%; object-fit: cover;">
+            </div>
+        }
 
-    <a href="/Post"
-       class="btn btn-secondary">
+        <div class="post-content lh-lg text-secondary mb-4" style="font-size: 16px; white-space: pre-line;">
+            @Model.Content
+        </div>
 
-        Quay lại
+        <hr />
 
-    </a>
-
+        <div class="d-flex gap-2">
+            <a href="/Post" class="btn btn-secondary btn-sm"><i class="bi bi-arrow-left"></i> Quay lại danh sách</a>
+            <a href="/Post/Edit/@Model.Id" class="btn btn-warning btn-sm text-white"><i class="bi bi-pencil-square"></i> Chỉnh sửa bài</a>
+        </div>
+    </div>
 </div>

@@ -1,0 +1,32 @@
+﻿@model IEnumerable<CMS.Data.Entities.OrderDetail>
+
+@{
+    ViewData["Title"] = "Chi tiết đơn hàng";
+}
+
+<div class="container mt-4">
+    <h2 class="text-danger mb-3">Chi tiết đơn hàng phôi số: #@ViewBag.OrderId</h2>
+
+    <table class="table table-bordered table-hover">
+        <thead class="table-danger">
+            <tr class="text-center">
+                <th>Mã chi tiết</th>
+                <th>Mã sản phẩm (Product ID)</th>
+                <th>Số lượng mua</th>
+                <th>Đơn giá sản phẩm</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td class="text-center">@item.Id</td>
+                    <td class="text-center">@item.ProductId</td>
+                    <td class="text-center">@item.Quantity</td>
+                    <td class="text-end">@item.UnitPrice.ToString("N0") VNĐ</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <a href="/Order" class="btn btn-secondary mt-3"><i class="bi bi-arrow-left"></i> Quay lại danh sách</a>
+</div>

@@ -1,0 +1,35 @@
+﻿@model IEnumerable<CMS.Data.Entities.Order>
+
+@{
+    ViewData["Title"] = "Danh sách đơn hàng";
+}
+
+<div class="container mt-4">
+    <h2 class="text-warning mb-3"><i class="bi bi-cart-check"></i> Nhật ký đơn hàng trên hệ thống</h2>
+    <table class="table table-bordered table-striped align-middle">
+        <thead class="table-warning text-dark">
+            <tr class="text-center">
+                <th>Mã Đơn Hàng</th>
+                <th>Mã Khách Hàng (Customer ID)</th>
+                <th>Ngày lập hóa đơn</th>
+                <th>Trạng thái (Mã số)</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null)
+            {
+                foreach (var item in Model)
+                {
+                    <tr>
+                        <td class="text-center fw-bold">@item.Id</td>
+                        <td class="text-center">@item.CustomerId</td>
+                        <td class="text-center">@item.OrderDate.ToString("dd/MM/yyyy")</td>
+                        <td class="text-center">
+                            <span class="badge bg-secondary">Mã: @item.Status</span>
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>

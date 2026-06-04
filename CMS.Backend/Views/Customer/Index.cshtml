@@ -1,0 +1,30 @@
+﻿@model IEnumerable<CMS.Data.Entities.Customer>
+
+@{
+    ViewData["Title"] = "Danh sách khách hàng";
+}
+
+<div class="container mt-4">
+    <h2 class="text-info mb-3"><i class="bi bi-person-badge"></i> Quản lý thông tin khách hàng</h2>
+    <table class="table table-bordered table-hover align-middle">
+        <thead class="table-info">
+            <tr class="text-center">
+                <th>Mã KH</th>
+                <th>Họ và tên</th>
+                <th>Số điện thoại</th>
+                <th>Địa chỉ Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td class="text-center fw-bold">@item.Id</td>
+                    <td class="fw-bold">@item.FullName</td>
+                    <td>@item.Phone</td>
+                    <td class="text-muted">@item.Email</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
